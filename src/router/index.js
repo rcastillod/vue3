@@ -19,6 +19,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/:pathMatch(.*)*', // New way to Vue 3 not found  
+    name: 'NotFound',
+    component: () => import('@/views/NotFound.vue')
   }
 ]
 
